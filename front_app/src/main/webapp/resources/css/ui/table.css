@@ -1,0 +1,62 @@
+table {
+  --table-height: 40px;
+  --font-size: 1.4rem;
+  --back-color : none;
+
+  font-size: var(--font-size);
+
+  :is(tr) {
+    border-bottom: 1px solid var(--color-6);
+    height: var(--table-height);
+    text-align: center;
+
+    &:not(:first-child) {
+      .detail {
+        text-align: left;
+      }
+    }
+    &:first-child {
+      background-color: var(--back-4);
+    }
+  }
+
+  .thead {
+    .empty {
+      width: 10%;
+    }
+
+    /*--------고객센터 다운로드---------*/
+    .num {
+      width: 10%;
+    }
+
+    .divide {
+      width: 20%;
+    }
+
+    .size {
+      width: 20%;
+    }
+
+    .file-down {
+      width: 15%;
+    }
+
+    /*--------고객센터 1:1문의---------*/
+    .category {
+      width: 10%;
+    }
+
+    .order-num {
+      width: 20%;
+    }
+
+    .man-date {
+      width: 15%;
+    }
+
+    .answer {
+      width: 10%;
+    }
+  }
+}

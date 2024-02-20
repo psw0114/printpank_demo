@@ -1,0 +1,82 @@
+.card {
+  --min-width: 290px;
+  --width: unset;
+
+  background-color: var(--back-1);
+  border-radius: var(--box-radius);
+  border: 1px solid var(--color-6);
+  padding-block: 12px;
+  padding-inline: 15px;
+  min-width: var(--min-width);
+  width: var(--width);
+
+  > .body {
+    --direction: column;
+    --justify-content: start;
+    --align-items: start;
+    --gap: 15px;
+
+    display: flex;
+    flex-direction: var(--direction);
+    align-items: var(--align-items);
+    justify-content: var(--justify-content);
+    gap: var(--gap);
+    min-width: unset;
+
+    > .item {
+      --direction: row;
+      --align-items: start;
+      --justify-content: start;
+      --gap: 10px;
+      --width: 100%;
+
+      display: flex;
+      flex-direction: var(--direction);
+      align-items: var(--align-items);
+      justify-content: var(--justify-content);
+      gap: var(--gap);
+      width: var(--width);
+
+      &:has(img) {
+        > img {
+          --img-size: 70px;
+          border-radius: 5px;
+          width: var(--img-size);
+          height: var(--img-size);
+          border: 1px solid var(--color-6);
+        }
+
+        > .desc {
+          --dsec-gap: 5px;
+          display: flex;
+          flex-direction: column;
+          gap: var(--dsec-gap);
+        }
+      }
+    }
+  }
+
+  &:has(> .body.img) {
+    --min-width: 390px;
+    padding: unset;
+
+    > .body {
+      &.img {
+        > img {
+          height: 165px;
+        }
+      }
+    }
+
+    > .footer {
+      min-width: unset;
+      height: unset;
+      background-color: var(--color-6);
+      padding-block: 10px;
+      padding-inline: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}

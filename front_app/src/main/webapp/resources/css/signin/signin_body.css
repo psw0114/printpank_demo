@@ -1,0 +1,10 @@
+div[is="pb-signin-body"] {
+  .login-box {
+    width: 35%;
+    margin-inline: auto;
+    & input[type="text"], input[type="password"] {
+      height: 55px;
+    }
+  }
+
+}

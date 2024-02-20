@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "typeRoots": ["@types"],
+        "checkJs": false,
+        "strictNullChecks": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "lib": ["ESNext", "DOM"]
+    }
+}

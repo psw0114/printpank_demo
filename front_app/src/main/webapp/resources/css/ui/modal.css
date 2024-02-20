@@ -1,0 +1,50 @@
+#modal,
+div[is="pb-modal"] {
+  display: none;
+  height: 100%;
+
+  .modal-area {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+      border: 3px solid var(--back-3);
+      padding: 20px 30px;
+      border-radius: 14px;
+      position: absolute;
+
+      z-index: 4;
+      background-color: white;
+
+      > .modal-title {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: center;
+      }
+
+      > #modal-content {
+        --width: 900px;
+        --height: 750px;
+        min-width: var(--width);
+        height: var(--height);
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.active {
+    display: block;
+  }
+}

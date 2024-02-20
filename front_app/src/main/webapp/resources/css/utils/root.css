@@ -1,0 +1,61 @@
+:root {
+  /*font-size*/
+  --font-25: 25px;
+  --font-24: 24px;
+  --font-18: 18px;
+  --font-14: 14px;
+  --font-13: 13px;
+  /*font-weight*/
+  --font-bold: bold;
+  /*border-radius*/
+  --box-radius: 8px;
+  --circle-radius: 15px;
+  /*color*/
+  --color-1: #4A4A4A;
+  --color-2: #3A67EA;
+  --color-3: #CCCCCC;
+  --color-4: #FF0000;
+  --color-5: #ffce00;
+  --color-6: #E2E2E2;
+  --color-7: #888888;
+  /*background-color*/
+  --back-1: #FFFFFF;
+  --back-2: black;
+  --back-3: #F1F1F1;
+  --back-4: #F9F9F9;
+  /*width*/
+  --img-size-1: 130px;
+  --partition-3: 400px;
+  --partition-4: 300px;
+  --partition-5: 250px;
+  /*shadow*/
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark-gray-1 {
+  color: var(--color-1);
+}
+
+.dark-gray-2 {
+  color: var(--color-7);
+}
+
+.light-gray-1 {
+  color: var(--color-3);
+}
+
+.light-gray-2 {
+  color: var(--color-6);
+}
+
+.blue {
+  color: var(--color-2);
+}
+
+.red {
+  color: var(--color-4);
+}
+
+.yellow {
+  color: var(--color-5);
+}

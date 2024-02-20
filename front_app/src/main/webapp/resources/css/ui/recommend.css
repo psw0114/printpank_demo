@@ -1,0 +1,53 @@
+#recommend,
+div[is="pb-recommend"] {
+  min-height: 600px;
+  width: 100%;
+
+  .container {
+    :is(.recommend-tab, .recommend-btn) {
+      font-size: 1.45rem;
+      color: #4A4A4A;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        color: var(--color-2);
+        font-weight: bold;
+      }
+    }
+
+    .row {
+      .side-menu {
+        width: 200px;
+      }
+
+      .product {
+        height: 100%;
+
+        :is(img) {
+          width: inherit;
+          height: 100%;
+        }
+
+        .content {
+          padding: 0 5px 5px 5px;
+        }
+
+        &:hover {
+          box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+      }
+
+      .side {
+        min-width: 200px;
+      }
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+  }
+}

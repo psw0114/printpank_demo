@@ -1,0 +1,53 @@
+@import url("common.css");
+@import url("modal/index.css");
+
+#payment {
+  .payment-desc {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-2);
+  }
+
+  .payment-ready {
+    margin-top: 50px;
+  }
+
+  .payment-main {
+    .context {
+      .card {
+        margin-top: 15px;
+
+        .text {
+          width: 350px;
+          word-break: break-all;
+        }
+
+        .price {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .card {
+    &.flow {
+      position: sticky;
+      top: 127px;
+      z-index: 1;
+      margin-top: 15px;
+    }
+
+    .detail {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .more-detail {
+        cursor: pointer;
+        color: var(--back-3);
+        text-decoration: underline;
+      }
+    }
+  }
+}

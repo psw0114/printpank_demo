@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.printbank.front_app.mappers.CshMapperInterface">
+	<!--
+	<select id="selectBanner" parameterType="String" resultType="com.printbank.front_app.beans.main.db.BannerDataBean">
+		SELECT 
+			BN_CODE AS code, 
+			BN_IMG AS src, 
+			BN_TYPE AS type 
+		FROM BANNER WHERE BN_STATE = "A" AND BN_TYPE = "${type}"
+	</select>
+	-->
+	<!--
+	<select id="selectMainNotice" resultType="com.printbank.front_app.beans.main.db.NoticeDataBean">
+		SELECT 
+			NO_CODE AS code, 
+			NO_TITLE AS title, 
+			NO_TYPE,
+			CASE NO_TYPE
+				WHEN 'A' THEN '상품안내'
+				WHEN 'B' THEN '배송안내'
+				WHEN 'C' THEN '취소/환불'
+				WHEN 'D' THEN '이벤트'
+				WHEN 'E' THEN '기타'
+			END AS type
+		FROM NOTICE WHERE NO_STATE = "A" LIMIT 0,4
+	</select>
+	-->
+	<!--
+	<select id="selectMainReview" resultType="com.printbank.front_app.beans.main.db.MainReviewBean">
+		SELECT P.PR_CODE AS prCode,
+			P.PR_NAME AS prName,
+			M.ME_NAME AS userName, 
+			R.PRR_REVIEW AS reviewText, 
+			R.PRR_SCORE AS star,
+			PI2.PI_IMG AS src
+		FROM PRODUCT P
+			INNER JOIN PRODUCT_REVIEW R 
+			ON P.PR_CODE = R.PRR_PRCODE
+			INNER JOIN PRODUCT_IMG PI2
+			ON P.PR_CODE = PI2.PI_PRCODE
+			INNER JOIN MEMBER M 
+			ON M.ME_CODE  = R.PRR_MECODE 
+		WHERE P.PR_STATE = "A" AND PI2.PI_IS_THUMBNAIL = "Y" AND M.ME_STATE = "A" GROUP BY P.PR_CODE LIMIT 0,3
+	</select>
+	-->
+	<!--
+	<select id="selectCategoryProduct" resultType="com.printbank.front_app.beans.category.db.CategoryDataBean">
+		SELECT P.PR_CODE AS prCode,
+			P.PR_NAME AS prName,
+			PI2.PI_IMG AS src
+		FROM PRODUCT P
+			INNER JOIN PRODUCT_IMG PI2
+			ON P.PR_CODE = PI2.PI_PRCODE 
+		WHERE P.PR_STATE = "A" AND PI2.PI_IS_THUMBNAIL = "Y"
+	</select>
+	-->
+	<!--
+	<select id="selectCustomerFaq" resultType="com.printbank.front_app.beans.customer.db.FaQDataBean">
+		SELECT 
+			FQ_TITLE AS question,
+			FQ_CONTENT AS answer,
+			FQ_TYPE AS type
+		FROM FAQ 
+		WHERE FQ_STATE = "A"
+	</select>
+	-->
+	<!--
+	<select id="selectCustomerNotice" resultType="com.printbank.front_app.beans.customer.db.NoticeDataBean">
+		SELECT 
+			NO_TITLE AS title,
+			NO_CONTENT AS text,
+			NO_TYPE,
+			CASE NO_TYPE
+				WHEN 'A' THEN '상품안내'
+				WHEN 'B' THEN '배송안내'
+				WHEN 'C' THEN '취소/환불'
+				WHEN 'D' THEN '이벤트'
+				WHEN 'E' THEN '기타'
+			END AS type
+		FROM NOTICE 
+		WHERE NO_STATE = "A"
+	</select>
+	-->
+	<!-- 
+		<select id="selectCustomerNotice" resultType="com.printbank.front_app.beans.test.PbMasterHeader">
+			
+		</select>
+	-->
+</mapper>

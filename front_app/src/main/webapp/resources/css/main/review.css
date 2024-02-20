@@ -1,0 +1,28 @@
+div[is="pb-main-review"] {
+  width: 100%;
+  height: 400px;
+  background-color: var(--back-4);
+
+  .container {
+    height: 100%;
+
+    .row {
+      height: 100%;
+    }
+  }
+
+  .review-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .review {
+    .review-star {
+      .img-box {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+}

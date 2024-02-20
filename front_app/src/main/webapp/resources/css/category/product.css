@@ -1,0 +1,25 @@
+#cate,
+div[is="pb-category-product"] {
+  min-height: 800px;
+
+  .container {
+    .row {
+      gap: 50px 15px;
+      justify-content: unset;
+
+      .product {
+        height: 363px;
+
+        .img {
+          height: 285px;
+          overflow: hidden;
+
+          img {
+            width: inherit;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

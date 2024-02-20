@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.printbank.front_app.mappers.PswMapperInterface">
+	<select id="selectTest"  resultType="String">
+		SELECT BN_CODE FROM BANNER
+	</select>
+	
+	<select id="header" resultType="com.printbank.front_app.beans.utils.db.HeaderNavBean">
+		SELECT pc.PRC_CODE AS PRCCODE,
+			 p.PR_CODE AS PRCODE,	
+			 pc.PRC_NAME AS PRCNAME,
+			 p.PR_NAME AS PRNAME,
+			 p.PI_ODCODE AS PIODCODE,
+			 p.PI_IMG AS PIIMG,
+			 p.PI_IS_THUMBNAIL AS PIISTHUMBNAIL
+		from PrintBank.PRODUCT_CATEGORY pc 
+			 LEFT OUTER JOIN PrintBank.PRODUCT_CATEGORY_RELATION pcr ON pcr.PRCR_PCCODE = pc.PRC_CODE
+																										AND pc.PRC_STATE = 'A'
+			 LEFT OUTER JOIN (SELECT p.PR_CODE ,
+											p.PR_NAME ,
+											pi2.PI_ODCODE ,
+											pi2.PI_IMG ,
+											pi2.PI_IS_THUMBNAIL 
+									 FROM PrintBank.PRODUCT p 
+											LEFT OUTER JOIN PrintBank.PRODUCT_IMG pi2 ON pi2.PI_PRCODE = p.PR_CODE 
+																										AND p.PR_STATE = 'A') p ON p.PR_CODE = pcr.PRCR_PRCODE
+	</select>
+	
+	<select id="headerNav"  resultType="String">
+		SELECT pc.PRC_CODE ,
+		   p.PR_CODE ,
+		   pc.PRC_NAME ,
+		   p.PR_NAME ,
+		   p.PI_ODCODE ,
+		   p.PI_IMG ,
+		   p.PI_IS_THUMBNAIL
+		from PrintBank.PRODUCT_CATEGORY pc 
+		   LEFT OUTER JOIN PrintBank.PRODUCT_CATEGORY_RELATION pcr ON pcr.PRCR_PCCODE = pc.PRC_CODE
+		                                                AND pc.PRC_STATE = 'A'
+		   LEFT OUTER JOIN (SELECT p.PR_CODE ,
+		                  p.PR_NAME ,
+		                  pi2.PI_ODCODE ,
+		                  pi2.PI_IMG ,
+		                  pi2.PI_IS_THUMBNAIL 
+		               FROM PrintBank.PRODUCT p 
+		                  LEFT OUTER JOIN PrintBank.PRODUCT_IMG pi2 ON pi2.PI_PRCODE = p.PR_CODE 
+		                                                AND p.PR_STATE = 'A') p ON p.PR_CODE = pcr.PRCR_PRCODE
+	</select>
+	
+	<!-- 대분류만 추출 -->
+	<select id="navMenu"  resultType="String">
+	SELECT 
+	   pc.PRC_NAME 
+	from PrintBank.PRODUCT_CATEGORY pc 
+	   LEFT OUTER JOIN PrintBank.PRODUCT_CATEGORY_RELATION pcr ON pcr.PRCR_PCCODE = pc.PRC_CODE
+	                                                AND pc.PRC_STATE = 'A'
+	   LEFT OUTER JOIN PrintBank.PRODUCT p ON p.PR_CODE = pcr.PRCR_PRCODE where p.PR_CODE is NULL
+	</select>
+	
+<!-- 상업인쇄 중분류 추출 -->
+	<select id ="select1" resultType ="String">
+	 SELECT
+	 	pc.PRC_NAME 
+	 FROM PRODUCT_CATEGORY_RELATION pcr 
+	  INNER JOIN PRODUCT_CATEGORY pc ON pcr.PRCR_PCCODE = pc.PRC_CODE
+		INNER JOIN PRODUCT p ON p.PR_CODE  = pcr.PRCR_PRCODE
+	 WHERE pcr.PRCR_PCCODE BETWEEN  23110100 AND  23110200 
+	 GROUP BY pc.PRC_NAME
+	</select>
+	
+	
+	<!-- 상업인쇄 제품 추출 -->
+	<select id ="select2" resultType ="String">
+		SELECT
+	    sub.PR_NAME
+		FROM
+		    (
+		        SELECT
+		            pcr.PRCR_PCCODE,
+				 	pc.PRC_NAME,
+				 	pcr.PRCR_PRCODE,
+				 	p.PR_NAME,
+		            CASE
+		                WHEN pcr.PRCR_PCCODE BETWEEN '23110101' AND '23110107' THEN '상업인쇄제품'
+		                WHEN pcr.PRCR_PCCODE BETWEEN '23110201' AND '23110204' THEN '디지털(인디고)'
+		                WHEN pcr.PRCR_PCCODE BETWEEN '23110301' AND '23110304' THEN '디지털(토너)'
+		                WHEN pcr.PRCR_PCCODE BETWEEN '23110401' AND '23110405' THEN '판촉물'
+		                WHEN pcr.PRCR_PCCODE BETWEEN '23110600' AND '23110600' THEN '기획상품'
+		                WHEN pcr.PRCR_PCCODE BETWEEN '23110801' AND '23110803' THEN '패키지'
+		            END AS idx
+		        FROM
+		            PRODUCT_CATEGORY_RELATION pcr
+		        INNER JOIN
+		            PRODUCT_CATEGORY pc ON pcr.PRCR_PCCODE = pc.PRC_CODE
+		        INNER JOIN
+		            PRODUCT p ON p.PR_CODE = pcr.PRCR_PRCODE
+		    ) AS sub
+		WHERE  idx = '상업인쇄제품'
+	</select>
+	
+	
+<!-- 	<select id ="imgSrc" resultType = "Stirng">
+	 SELECT pi2.PI_IMG 
+	 FROM PrintBank.PRODUCT_IMG pi2 
+	 WHERE pi2.PI_PRCODE IN (SELECT p.PR_CODE 
+	                  FROM PrintBank.PRODUCT p
+	                  WHERE p.PR_STATE = 'A')
+	</select> -->
+	
+</mapper>

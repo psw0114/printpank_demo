@@ -1,0 +1,26 @@
+.tab {
+  --min-width: 100px;
+  --height: 30px;
+
+  display: flex;
+  border-bottom: 2px solid var(--color-3);
+
+  .tabs {
+    --border-radious: 5px;
+
+    flex: 1;
+    cursor: pointer;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    background-color: var(--back-3);
+    border-top-right-radius: var(--border-radious);
+    border-top-left-radius: var(--border-radious);
+    padding: 0px 5px;
+
+    &.active {
+      background-color: var(--color-2);
+      color: var(--color-6);
+    }
+  }
+}

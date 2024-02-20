@@ -1,0 +1,6 @@
+#content {
+  --flex: 1;
+
+  min-width: 1360px;
+  flex: var(--flex);
+}

@@ -1,0 +1,20 @@
+/* 제거 예정 */
+div[is="pb-side-image"] {
+  .side-image {
+    display: none;
+
+    &.on-side-image {
+      display: block;
+
+      :is(img) {
+        height: 800px;
+        width: 213px;
+        border: 1px solid black;
+        position: absolute;
+        top: 373px;
+        transform: translateX(-250px);
+        --img-size: unset;
+      }
+    }
+  }
+}

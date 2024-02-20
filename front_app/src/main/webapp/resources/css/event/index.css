@@ -1,0 +1,8 @@
+@import url("./product.css");
+
+div[is="pb-title"] {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}

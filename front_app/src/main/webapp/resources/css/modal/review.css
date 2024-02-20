@@ -1,0 +1,26 @@
+div[is="pb-modal-review-input"] {
+  .modal-display {
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  & textarea {
+    border: 1px solid var(--back-3);
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .btn-area {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

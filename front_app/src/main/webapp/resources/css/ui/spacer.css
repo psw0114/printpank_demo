@@ -1,0 +1,7 @@
+.spacer {
+  --height: 0px;
+  --width: 0px;
+
+  height: var(--height);
+  width: var(--width);
+}

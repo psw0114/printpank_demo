@@ -1,0 +1,71 @@
+div[is="pb-bucketlist-bucket"] {
+  .bucketlist-main {
+    .context {
+      .title {
+        border-top: 1px solid var(--color-6);
+        border-bottom: 1px solid var(--color-6);
+        padding: 12.5px 0;
+        text-align: center;
+        margin: 12.5px 0px;
+      }
+
+      .card {
+        margin-bottom: 15px;
+
+        .text {
+          width: 350px;
+          word-break: break-all;
+        }
+
+        .memo {
+          padding: 0 30px;
+        }
+
+        .price {
+          text-align: center;
+          width:84.5px;
+        }
+
+        &.sub {
+          .desc {
+            & div:first-child {
+              display: none;
+            }
+
+            .text {
+              width: 100%;
+            }
+          }
+
+          & img {
+            display: none;
+          }
+
+          & button {
+            display: none;
+          }
+
+          .foot-area {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .card {
+    &.flow {
+      position: sticky;
+      top: 127px;
+      z-index: 1;
+      margin: 15px 0;
+    }
+  }
+}

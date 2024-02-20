@@ -1,0 +1,10 @@
+div[is="pb-event-product"] {
+  .event-title {
+    text-align: center;
+  }
+  .product {
+    .img {
+      height: 300px;
+    }
+  }
+}

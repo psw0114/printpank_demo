@@ -1,0 +1,32 @@
+#modal,
+div[is="pb-modal-parcel"] {
+  .notes {
+    margin-bottom: 20px;
+
+    .notes-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .addr-manage {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+  .del-input {
+    border-top: 1px solid var(--color-6);
+
+    .write-area {
+      text-align: left;
+      padding : 10px;
+    }
+
+    .input-group {
+      padding: 10px 0;
+    }
+
+    .colr {
+      background-color: #f9fafc;
+    }
+  }
+}

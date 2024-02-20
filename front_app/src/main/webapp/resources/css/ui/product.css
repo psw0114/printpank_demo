@@ -1,0 +1,35 @@
+.product {
+  --product-width: 225px;
+  overflow: hidden;
+
+  width: var(--product-width);
+
+  > .img {
+    height: 225px;
+    background-color: var(--back-3);
+    border-radius: var(--box-radius);
+  }
+
+  > .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    > .title {
+      padding-block-start: 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    > .text {
+      font-size: 1.4rem;
+    }
+
+    > .price {
+      display: flex;
+      gap: 10px;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+}

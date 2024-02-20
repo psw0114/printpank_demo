@@ -1,0 +1,46 @@
+div[is="pb-product-receipt"] {
+  .receipt {
+    z-index: 3;
+    border: 1px solid var(--color-2);
+    background-color: var(--back-1);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    position: fixed;
+    bottom: 0px;
+    width: 600px;
+    left:50%;
+    transform: translateX(-50%);
+
+    .updown-btn {
+      width: 100%;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &.active {
+        + .receipt-content {
+          display: block;
+        }
+      }
+    }
+
+    .receipt-content {
+      display: none;
+
+      .card {
+        border:unset;
+
+        .body {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    }
+
+    .total-price {
+      height: 50px;
+      padding:0 10px;
+    }
+  }
+}

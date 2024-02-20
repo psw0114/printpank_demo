@@ -1,0 +1,30 @@
+@import url("common.css");
+
+div[is="pb-title"] {
+  .row {
+    justify-content: center;
+
+    .title-lg {
+      font-weight: bold;
+    }
+  }
+}
+
+#content {
+  .container {
+    .container {
+      width: 100%;
+      margin: unset;
+      padding-inline: 50px;
+    }
+  }
+
+  .term {
+    height: 276px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

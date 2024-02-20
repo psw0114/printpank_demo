@@ -1,0 +1,5 @@
+.cursor {
+  --cursor: default;
+
+  cursor: var(--cursor);
+}

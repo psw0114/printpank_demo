@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  gap: 5px;
+
+  .paging {
+    cursor: pointer;
+    border: 1px solid var(--color-6);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+
+    &.active {
+      background-color: var(--color-1);
+      color: var(--back-1);
+    }
+  }
+
+  .icon-left {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .icon-right {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+}

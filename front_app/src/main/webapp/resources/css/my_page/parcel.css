@@ -1,0 +1,19 @@
+div[is="pb-my-page-parcel"]{
+  > table{
+    &.parcel-search{
+      & tr{
+        & td:nth-child(2n){
+          padding:8px 0px;
+          background-color: var(--back-1);
+        }
+    }
+      border-top:1px solid var(--color-6);
+    }
+  }
+  .input-md{
+    width:170px;
+  }
+  .input-group{
+    justify-content: end;
+  }
+}

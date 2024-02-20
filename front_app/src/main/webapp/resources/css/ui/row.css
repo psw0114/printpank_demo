@@ -1,0 +1,12 @@
+.row {
+  --wrap: wrap;
+  --gap: 15px;
+  --justify-content: start;
+  --align-items: start;
+
+  display: flex;
+  flex-flow: row var(--wrap);
+  gap: var(--gap);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+}

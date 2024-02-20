@@ -1,0 +1,33 @@
+div[is="pb-my-page-user"] {
+  > table {
+    & tr {
+      background-color: var(--back-3);
+
+      & td:nth-child(2n-1) {
+        width: 120px;
+      }
+
+      & td:nth-child(2n) {
+        padding: 8px 15px;
+        background-color: var(--back-1);
+        text-align: start;
+      }
+    }
+
+    border-top: 1px solid var(--color-6);
+  }
+
+  .input-md {
+    height: 30px;
+
+    &:is([type="number"]) {
+      width: 130px;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import url("signin_body.css");
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+
+  & img {
+    width: 500px;
+    height: 100px;
+  }
+}

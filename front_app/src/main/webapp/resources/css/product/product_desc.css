@@ -1,0 +1,57 @@
+div[is="pb-product-desc"] {
+  height: 700px;
+
+  > .container {
+    height: 100%;
+
+    > .row {
+      height: 100%;
+
+       .img {
+        width: 662.5px;
+        height: 100%;
+        background-color: var(--back-3);
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .col {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .body {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        > .row {
+          height: 160px;
+
+          .img {
+            width: 80px;
+            height: 80px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .warning-box {
+          width: 100%;
+          height: 200px;
+          border: 1px solid var(--back-3);
+          padding: 10px;
+          white-space: nowrap;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}

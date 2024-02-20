@@ -1,0 +1,172 @@
+.icon-error {
+  width: 14px;
+  height: 14px;
+  background-image: url(/resource/images/icon_1.png);
+  background-size: contain;
+}
+
+.icon-left {
+  width: 20px;
+  height: 20px;
+  background-image: url(/resource/images/icon_2.png);
+  background-size: contain;
+}
+
+.icon-right {
+  width: 20px;
+  height: 20px;
+  background-image: url(/resource/images/icon_3.png);
+  background-size: contain;
+}
+
+.icon-question {
+  width: 18px;
+  height: 22.5px;
+  background-image: url(/resource/images/icon_4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-star {
+  width: 16px;
+  height: 15px;
+  background-image: url(/resource/images/icon_6.png);
+  background-size: contain;
+
+  &.fill {
+    background-image: url(/resource/images/icon_5.png);
+  }
+}
+
+.icon-help {
+  width: 18px;
+  height: 18px;
+  background-image: url(/resource/images/icon_7.png);
+}
+
+.icon-search-glass {
+  width: 18px;
+  height: 18px;
+  background-image: url(/resource/images/icon_8.png);
+  background-size: contain;
+}
+
+.icon-down-arrow {
+  width: 23px;
+  height: 23px;
+  background-image: url(/resource/images/icon_9.png);
+  background-size: contain;
+}
+
+.icon-sns-youtube {
+  width: 30px;
+  height: 30px;
+  background-image: url(/resource/images/icon_10.png);
+}
+
+.icon-sns-instar {
+  width: 30px;
+  height: 30px;
+  background-image: url(/resource/images/icon_11.png);
+}
+
+.icon-sns-facebook {
+  width: 30px;
+  height: 30px;
+  background-image: url(/resource/images/icon_12.png);
+}
+
+.icon-sns-blog {
+  width: 30px;
+  height: 30px;
+  background-image: url(/resource/images/icon_13.png);
+}
+
+.icon-plus {
+  width: 16px;
+  height: 16px;
+  background-image: url(/resource/images/icon_14.png);
+  background-size: contain;
+}
+
+.icon-right-arrow {
+  width: 15px;
+  height: 15px;
+  background-image: url(/resource/images/icon_15.png);
+  background-size: contain;
+}
+
+.icon-down {
+  width: 15px;
+  height: 8px;
+  background-image: url(/resource/images/icon_16.png);
+}
+
+.icon-close {
+  width: 18px;
+  height: 18px;
+  background-image: url(/resource/images/icon_17.png);
+}
+
+.icon-google {
+  width: 25px;
+  height: 25px;
+  background-image: url(/resource/images/icon_google.png);
+  background-size: contain;
+}
+
+.icon-kakao {
+  width: 25px;
+  height: 25px;
+  background-image: url(/resource/images/icon_kakao.png);
+  background-size: contain;
+}
+
+.icon-naver {
+  width: 25px;
+  height: 25px;
+  background-image: url(/resource/images/icon_naver.png);
+  background-size: contain;
+}
+
+.icon-google-bar {
+  width: 150px;
+  height: 40px;
+  background-image: url(/resource/images/icon_google_bar.png);
+  background-size: 100% 100%;
+}
+
+.icon-kakao-bar {
+  width: 150px;
+  height: 40px;
+  background-image: url(/resource/images/icon_kakao_bar.png);
+  background-size: 100% 100%;
+}
+
+.icon-naver-bar {
+  width: 150px;
+  height: 40px;
+  background-image: url(/resource/images/icon_naver_bar.png);
+  background-size: 100% 100%;
+}
+
+.side-logo {
+  width: 100px;
+  height: 100px;
+  background-image: url(/resource/images/side_logo.gif);
+  background-size: 100% 100%;
+}
+
+.icon-up-btn {
+  width: 20px;
+  height: 20px;
+  background-image: url(/resource/images/up.png);
+  background-size: contain;
+}
+
+.icon-down-btn {
+  width: 20px;
+  height: 20px;
+  background-image: url(/resource/images/down.png);
+  background-size: contain;
+}

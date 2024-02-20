@@ -1,0 +1,30 @@
+#news,
+div[is="pb-news"] {
+  height: 310px;
+  width: 100%;
+
+  .container {
+    height: inherit;
+
+    .row {
+      height: inherit;
+
+      .card {
+        height: inherit;
+
+        .body {
+          height: 80%;
+
+          :is(img) {
+            height: 100%;
+          }
+        }
+
+        .footer {
+          height: 20%;
+          background-color: unset;
+        }
+      }
+    }
+  }
+}

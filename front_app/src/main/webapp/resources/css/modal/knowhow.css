@@ -1,0 +1,18 @@
+div[is="pb-modal-knowhow"] {
+  .modal-display {
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .btn-area {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

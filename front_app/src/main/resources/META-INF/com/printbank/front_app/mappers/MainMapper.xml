@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.printbank.front_app.mappers.MapperInterface">
+	<select id="mainSelectBanner" parameterType="String" resultType="com.printbank.front_app.beans.main.db.BannerBean">
+		SELECT 
+			B.BN_CODE AS code, 
+			B.BN_IMG AS src, 
+			B.BN_TYPE AS type 
+		FROM BANNER B
+		WHERE B.BN_STATE = "A"
+			AND B.BN_TYPE = "${type}"
+	</select>
+	<select id="mainSelectNotice" resultType="com.printbank.front_app.beans.main.db.NoticeBean">
+		SELECT 
+			N.NO_CODE AS code, 
+			N.NO_TITLE AS title, 
+			N.NO_TYPE,
+			CASE N.NO_TYPE
+				WHEN 'A' THEN '상품안내'
+				WHEN 'B' THEN '배송안내'
+				WHEN 'C' THEN '취소/환불'
+				WHEN 'D' THEN '이벤트'
+				WHEN 'E' THEN '기타'
+			END AS type
+		FROM NOTICE N
+		WHERE N.NO_STATE = "A"
+		LIMIT 0, 4
+	</select>
+	<select id="mainSelectReview" resultType="com.printbank.front_app.beans.main.db.ReviewBean">
+		SELECT P.PR_CODE AS prCode,
+			P.PR_NAME AS prName,
+			PR.PRR_REVIEW AS reviewText,
+			PR.PRR_SCORE AS star,
+			pi2.PI_IMG AS src,
+			m.ME_NAME AS userName
+		FROM PRODUCT P INNER JOIN (SELECT PR.*
+									from PRODUCT_REVIEW PR 
+									WHERE (PR.PRR_PRCODE, PR.PRR_MECODE) IN (SELECT PR.PRR_PRCODE,
+																														MAX(PR.PRR_MECODE) 
+																													from PRODUCT_REVIEW PR
+																													Group by PR.PRR_PRCODE)) PR ON PR.PRR_PRCODE = P.PR_CODE
+			INNER JOIN (SELECT pi2.*
+						from PRODUCT_IMG pi2 
+						WHERE pi2.PI_IS_THUMBNAIL = 'Y') pi2 ON pi2.PI_PRCODE = P.PR_CODE 
+			INNER JOIN (SELECT m.*
+						FROM `MEMBER` m 
+						WHERE m.ME_STATE = 'A'
+							AND m.ME_TYPE = 'A') m ON m.ME_CODE = PR.PRR_MECODE
+		WHERE P.PR_STATE = "A"
+		LIMIT 0, 3
+	</select>
+</mapper>

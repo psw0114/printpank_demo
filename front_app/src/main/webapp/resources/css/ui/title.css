@@ -1,0 +1,16 @@
+div[is="pb-title"] {
+  > .container {
+    > .row {
+      --gap: 10px;
+      --align-items: end;
+    }
+
+    > .spacer {
+      --height: 10px;
+    }
+
+    > .divider {
+      --color: var(--color-2);
+    }
+  }
+}

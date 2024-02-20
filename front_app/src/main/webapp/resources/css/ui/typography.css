@@ -1,0 +1,123 @@
+/*----------------제목-------------------*/
+.title-lg {
+  --font-weight: normal;
+  --font-size: 3.5rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.title-md {
+  --font-weight: normal;
+  --font-size: 2.8rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.title-sm {
+  --font-weight: normal;
+  --font-size: 2.5rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.heading-lg {
+  --font-weight: normal;
+  --font-size: 2.2rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.heading-md {
+  --font-weight: normal;
+  --font-size: 2rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.heading-sm {
+  --font-weight: normal;
+  --font-size: 1.8rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+/*----------------기본글꼴 / 체크박스 / 버튼 / 사이드바 / 헤더 / 푸터-------------------*/
+
+.body-lg {
+  --font-weight: normal;
+  --font-size: 1.8rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.body-md {
+  --font-weight: normal;
+  --font-size: 1.7rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.body-sm {
+  --font-weight: normal;
+  --font-size: 1.6rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.display-lg {
+  --font-weight: normal;
+  --font-size: 1.6rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.display-md {
+  --font-weight: normal;
+  --font-size: 1.4rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.display-sm {
+  --font-weight: normal;
+  --font-size: 1.3rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+/*----------------내용 or 설명문-------------------*/
+.label-lg {
+  --font-weight: normal;
+  --font-size: 1.6rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.label-md {
+  --font-weight: normal;
+  --font-size: 1.5rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.label-sm {
+  --font-weight: normal;
+  --font-size: 1.4rem;
+
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}

@@ -1,0 +1,28 @@
+div[is="pb-modal-partition"] {
+  .modal-display {
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .rest-amount {
+      text-align: end;
+    }
+
+    .new-item {
+      .item-amount {
+        width: 100px;
+      }
+    }
+  }
+
+  .btn-area {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

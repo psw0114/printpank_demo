@@ -1,0 +1,67 @@
+div[is="pb-side-menu"] {
+  --width: 250px;
+  width: var(--width);
+
+  .side-top {
+    margin-bottom: 30px;
+
+    .side-title {
+      margin-bottom: 44px;
+    }
+
+    .cate {
+      border-bottom: 1px solid black;
+
+      .item {
+        cursor: pointer;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 3px;
+
+        &:not(:first-child) {
+          border-top: 1px solid var(--color-6);
+        }
+
+        &.active {
+          color: var(--color-2);
+
+          + .side-submenu {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .side-submenu {
+    display: none;
+    padding:0 10px;
+
+    .sub-items {
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      &.active {
+        color: var(--color-2);
+      }
+    }
+  }
+
+  .side-bottom {
+    .number {
+      margin: 5px 0;
+    }
+
+    .store-info {
+      margin-top: 30px;
+      border-top: 1px solid var(--color-6);
+      border-bottom: 1px solid var(--color-6);
+      padding-top: 20px;
+
+      .place {
+        margin: 30px 0;
+      }
+    }
+  }
+}

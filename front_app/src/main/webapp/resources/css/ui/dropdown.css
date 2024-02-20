@@ -1,0 +1,14 @@
+.dropdown {
+  > .dropdown-toggle {
+    &.expand {
+      + .dropdown-item {
+        display: block !important;
+      }
+    }
+  }
+
+  > .dropdown-item {
+    display: none;
+    position: absolute;
+  }
+}
