@@ -15,6 +15,8 @@
   <div is="pb-main" id="content"></div>
   <!-- footer -->
   <div is="pb-footer" id="footer"></div>
+
+  <!-- test -->
 </body>
 <script src="resource/js/main.js" type="module"></script>
 </html>
